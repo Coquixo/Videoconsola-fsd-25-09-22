@@ -20,14 +20,19 @@ body {
 #LeftSide {
 
 
-    background-color: rgb(110, 235, 193);
+    background-color: rgb(96, 223, 255);
     border-bottom-left-radius: 70px;
     border-top-left-radius: 70px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 4fr 1fr 1fr;
+    box-shadow: 7px 13px 8px #888888;
+    
+    transition: all 0.16s ease-in;
+}
 
-
+#LeftSide:hover{
+  transform: translate(0, -7vh);
 }
 
 #MinusButtonT {
@@ -35,6 +40,7 @@ body {
     align-items: flex-end;
     grid-column: 3/4;
     grid-row: 1/2;
+    border: 1px rgb(172, 172, 172)
 }
 
 #MinusButton {
@@ -43,6 +49,7 @@ body {
     border-radius: 3px;
     width: 1.3vw;
     height: 0.95vh;
+    border: 1px rgb(172, 172, 172) solid;
 
 }
 
@@ -62,13 +69,13 @@ body {
     background-color: rgb(0, 0, 0);
     border: 1px rgb(172, 172, 172) solid;
     border-radius: 50%;
+    box-shadow: 3px 5px 8px #85858534;
 
 }
 
 #JoyStickBorderInLeft {
     width: 2.08vw;
     height: 4.25vh;
-
     background-color: black;
     border: 1px rgb(255, 255, 255) solid;
     border-radius: 50%;
@@ -86,7 +93,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 0 0 0.31vw;
-    
+
 
 }
 
@@ -98,7 +105,7 @@ body {
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
-    
+
 
 }
 
@@ -170,7 +177,7 @@ body {
 
 
 #LeftButtonLIn {
-    grid-column:1/2 ;
+    grid-column: 1/2;
     grid-row: 4/5;
     border-right: .8vh solid #000000;
     border-top: 0.4vw solid transparent;
@@ -187,7 +194,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    box-shadow: 7px 13px 8px #888888;
 }
 
 #Screen {
@@ -203,8 +210,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
-
+    box-shadow: 7px 13px 8px #888888;
+    transition: all 0.16s ease-in;
 }
+#RightSide:hover{
+    transform: translate(0, -7vh);
+  }
 
 #PlusButtonT {
     display: flex;
@@ -217,38 +228,128 @@ body {
 
 #PlusButtonH {
     background-color: black;
-    border: 1px solid black;
     border-radius: 3px;
     width: 1.3vw;
     height: 0.95vh;
     margin: 0;
+    
 
 
 }
 
 #PlusButtonV {
     background-color: black;
-    border: 1px solid black;
     border-radius: 3px;
     height: 2.65vh;
     width: 0.47vw;
     position: fixed;
-
+    
 
 }
 
 #MainButtonsR {
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: #000000;
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     margin: 0 0 0 0.31vw;
-    
+
 }
+
+#UpButtonROut {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: rgb(129, 129, 129);
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50%;
+    width: 1vw;
+    height: 2vh;
+
+}
+
+#RightButtonROut {
+
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-color: rgb(129, 129, 129);
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50%;
+    width: 1vw;
+    height: 2vh;
+}
+
+#DownButtonROut {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background-color: rgb(129, 129, 129);
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50%;
+    width: 1vw;
+    height: 2vh;
+
+}
+
+#LeftButtonROut {
+
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: rgb(129, 129, 129);
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50%;
+    width: 1vw;
+    height: 2vh;
+}
+
+#UpButtonRIn {
+    color: white;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 0vw;
+    height: 0;
+    display: flex;
+    align-items: center;
+    margin:0.11vh 0 0 0.23vw;
+}
+
+#RightButtonRIn {
+    color: white;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    width: 0.25vw;
+    height: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0.27vw;
+}
+
+
+#DownButtonRIn {
+    color: white;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 0vw;
+    height: 0;
+    display: flex;
+    align-items: center;
+    margin: 0.1vw 0 0 0.27vw;
+}
+
+
+#LeftButtonRIn {
+    color: white;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 0.25vw;
+    height: 0;
+    display: flex;
+    align-items: center;
+    margin: 0.11vh 0 0 0.24vw;
+}
+
 
 #JoyStickRight {
     display: flex;
@@ -256,6 +357,7 @@ body {
     justify-content: center;
     grid-column: 2/3;
     grid-row: 3/4;
+    
 
 }
 
@@ -265,6 +367,7 @@ body {
     background-color: rgb(0, 0, 0);
     border: 1px rgb(172, 172, 172) solid;
     border-radius: 50%;
+    box-shadow: 3px 5px 8px #85858534;
 
 }
 
