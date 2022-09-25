@@ -1,14 +1,24 @@
+@font-face {
+    font-family: Poppins;
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+
 body {
 
     margin: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(15 23 42);
+    font-family: Poppins;
+    font-size: smaller;
+
 }
 
 
 
-#Psp {
+
+#Switch {
     height: 37vh;
     width: 44vw;
     display: grid;
@@ -20,19 +30,21 @@ body {
 #LeftSide {
 
 
-    background-color: rgb(96, 223, 255);
+    background-color: rgb(92, 222, 255);
     border-bottom-left-radius: 70px;
     border-top-left-radius: 70px;
+
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 4fr 1fr 1fr;
-    box-shadow: 7px 13px 8px #888888;
-    
+    box-shadow: -4px 12px 20px #1b41aa, 0 8px 10px -6px rgb(0 0 0 / 0.1);
     transition: all 0.16s ease-in;
+    /* -------- */
+    border-top: 6px solid #ececec;
 }
 
-#LeftSide:hover{
-  transform: translate(0, -7vh);
+#LeftSide:hover {
+    transform: translate(0, -7vh);
 }
 
 #MinusButtonT {
@@ -62,25 +74,30 @@ body {
 
 }
 
-#JoyStickBorderOutLeft {
+#JoyStickOutLeft {
     width: 2.6vw;
     height: 5.31vh;
 
-    background-color: rgb(0, 0, 0);
-    border: 1px rgb(172, 172, 172) solid;
+    background-color: rgb(68, 68, 68);
+    border: 1px rgb(0, 0, 0) solid;
     border-radius: 50%;
-    box-shadow: 3px 5px 8px #85858534;
+    box-shadow: 3px 5px 30px #000000b6;
 
 }
 
-#JoyStickBorderInLeft {
+.cover {
+    object-fit: cover;
+}
+
+#JoyStickInLeft {
     width: 2.08vw;
     height: 4.25vh;
     background-color: black;
-    border: 1px rgb(255, 255, 255) solid;
+    border: 1px rgb(29, 29, 29) solid;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     margin: 0 0 0.56vh 0;
+    box-shadow: inset 3px 5px 30px #3a3a3a;
 
 }
 
@@ -101,10 +118,11 @@ body {
     grid-column: 2/3;
     grid-row: 3/4;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 12px #0000006b;
 
 
 }
@@ -113,53 +131,63 @@ body {
     grid-column: 3/4;
     grid-row: 4/5;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 12px #0000006b;
 }
 
 #DownButtonLOut {
     grid-column: 2/3;
     grid-row: 5/6;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
-
+    box-shadow: 2px 2px 12px #0000006b;
 }
 
 #LeftButtonLOut {
     grid-column: 1/2;
     grid-row: 4/5;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 12px #0000006b;
 }
+
 
 #UpButtonLIn {
     grid-column: 2/3;
     grid-row: 3/4;
-    border-bottom: 0.4vw solid #000000;
-    border-left: 0.8vh solid transparent;
-    border-right: 0.8vh solid transparent;
-    width: 0vw;
-    height: 0;
-    margin: 0 0 0.17vh 0.16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(270deg);
+
 }
+
+.arrow {
+
+    width: 0.7vw;
+    height: 1.8vh;
+    margin-left: 0.1vw;
+
+}
+
 
 #RightButtonLIn {
     grid-column: 3/4;
     grid-row: 4/5;
-    border-left: .8vh solid #000000;
-    border-top: 0.4vw solid transparent;
-    border-bottom: 0.4vw solid transparent;
-    width: 0.25vw;
-    height: 0;
-    margin: 0 0 0 0.45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
 
@@ -167,26 +195,55 @@ body {
 
     grid-column: 2/3;
     grid-row: 5/6;
-    border-top: 0.4vw solid #000000;
-    border-left: 0.8vh solid transparent;
-    border-right: 0.8vh solid transparent;
-    width: 0vw;
-    height: 0;
-    margin: 0.16vw 0 0 0.16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
 }
 
 
 #LeftButtonLIn {
     grid-column: 1/2;
     grid-row: 4/5;
-    border-right: .8vh solid #000000;
-    border-top: 0.4vw solid transparent;
-    border-bottom: 0.4vw solid transparent;
-    width: 0.25vw;
-    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
 }
 
+#CaptureButtonT {
 
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+
+}
+
+#CaptureButtonOut {
+    width: 1.1vw;
+    height: 2.2vh;
+    background-color: rgb(43, 43, 43);
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border: 1px rgb(182, 182, 182) solid;
+}
+
+#CaptureButtonIn {
+    background-color: rgb(78, 78, 78);
+    border: 1px rgb(22, 22, 22) solid;
+    border-radius: 50%;
+    width: 0.7vw;
+    height: 1.4vh;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: 0 0 0 0.198vw;
+
+
+}
 
 #MidSide {
     background-color: rgb(0, 0, 0);
@@ -194,8 +251,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 7px 13px 8px #888888;
+    box-shadow: 0px 10px 15px rgb(68, 68, 68), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    margin: 4px 0 0 0;
 }
+
 
 #Screen {
     background-color: rgb(255, 255, 255);
@@ -210,12 +269,16 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
-    box-shadow: 7px 13px 8px #888888;
+    box-shadow: 4px 12px 20px #7f1d1d, 0 8px 10px -6px rgb(0 0 0 / 0.1);
     transition: all 0.16s ease-in;
+    /* ----------- */
+    border-top: 6px solid #ececec;
+
 }
-#RightSide:hover{
+
+#RightSide:hover {
     transform: translate(0, -7vh);
-  }
+}
 
 #PlusButtonT {
     display: flex;
@@ -232,7 +295,7 @@ body {
     width: 1.3vw;
     height: 0.95vh;
     margin: 0;
-    
+
 
 
 }
@@ -243,17 +306,17 @@ body {
     height: 2.65vh;
     width: 0.47vw;
     position: fixed;
-    
+
 
 }
 
 #MainButtonsR {
     grid-column: 2/3;
     grid-row: 2/3;
-    
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     margin: 0 0 0 0.31vw;
@@ -264,10 +327,11 @@ body {
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 20px #0000006b;
 
 }
 
@@ -276,21 +340,23 @@ body {
     grid-column: 3/4;
     grid-row: 3/4;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 20px #0000006b;
 }
 
 #DownButtonROut {
     grid-column: 2/3;
     grid-row: 4/5;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37)solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
-
+    margin: 0 0 -0.2vh 0;
+    box-shadow: 2px 2px 20px #0000006b;
 }
 
 #LeftButtonROut {
@@ -298,32 +364,32 @@ body {
     grid-column: 1/2;
     grid-row: 3/4;
     background-color: rgb(129, 129, 129);
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px rgb(37, 37, 37) solid;
     border-radius: 50%;
     width: 1vw;
     height: 2vh;
+    box-shadow: 2px 2px 20px #0000006b;
+    margin: -0.02vh 0 0 -0.012vw;
 }
 
 #UpButtonRIn {
     color: white;
     grid-column: 2/3;
     grid-row: 2/3;
-    width: 0vw;
-    height: 0;
     display: flex;
     align-items: center;
-    margin:0.11vh 0 0 0.23vw;
+    justify-content: center;
+
+
 }
 
 #RightButtonRIn {
     color: white;
     grid-column: 3/4;
     grid-row: 3/4;
-    width: 0.25vw;
-    height: 0;
     display: flex;
     align-items: center;
-    margin: 0 0 0 0.27vw;
+    justify-content: center;
 }
 
 
@@ -331,11 +397,10 @@ body {
     color: white;
     grid-column: 2/3;
     grid-row: 4/5;
-    width: 0vw;
-    height: 0;
     display: flex;
     align-items: center;
-    margin: 0.1vw 0 0 0.27vw;
+    justify-content: center;
+
 }
 
 
@@ -343,11 +408,11 @@ body {
     color: white;
     grid-column: 1/2;
     grid-row: 3/4;
-    width: 0.25vw;
-    height: 0;
     display: flex;
     align-items: center;
-    margin: 0.11vh 0 0 0.24vw;
+    justify-content: center;
+
+
 }
 
 
@@ -357,27 +422,61 @@ body {
     justify-content: center;
     grid-column: 2/3;
     grid-row: 3/4;
-    
+
 
 }
 
-#JoyStickBorderOutRight {
+#JoyStickOutRight {
     width: 2.6vw;
     height: 5.31vh;
-    background-color: rgb(0, 0, 0);
-    border: 1px rgb(172, 172, 172) solid;
+    background-color: rgb(68, 68, 68);
+    border: 1px rgb(0, 0, 0) solid;
     border-radius: 50%;
-    box-shadow: 3px 5px 8px #85858534;
+    box-shadow: 2px 5px 30px #000000b6;
 
 }
 
-#JoyStickBorderInRight {
+#JoyStickInRight {
     width: 2.08vw;
     height: 4.25vh;
     background-color: black;
-    border: 1px rgb(255, 255, 255) solid;
+    border: 1px rgb(29, 29, 29) solid;
     border-radius: 50%;
     position: fixed;
     margin: 0 0 0 0;
+    box-shadow: inset 3px 5px 30px #3a3a3a;
 
+}
+
+#HomeButtonT {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+#HomeButtonOut {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 1.1vw;
+    height: 2.2vh;
+    background-color: rgb(92, 92, 92);
+    border: 2px rgb(182, 182, 182) solid;
+    border-radius: 50%;
+}
+
+#HomeButtonIn {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#HomeButton {
+    margin: 0;
 }
