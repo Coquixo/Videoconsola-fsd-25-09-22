@@ -271,7 +271,6 @@ p{
 #MidSide {
 
     background-color: rgb(161, 161, 161);
-    border: 5px rgb(161, 161, 161) solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,7 +285,7 @@ p{
 
 #Screen {
 
-    min-width: 90%;
+    min-width: 93%;
     background-color: rgb(255, 255, 255);
     height: 90%;
     display: flex;
@@ -409,6 +408,7 @@ p{
 
 #DownButtonRIn {
 
+   
     color: white;
     grid-column: 2/3;
     grid-row: 4/5;
@@ -479,5 +479,11 @@ p{
 #HomeButton {
 
     margin: 0;
+
+}
+
+p{
+
+    font-size: 0.5vw;
 
 }
