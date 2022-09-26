@@ -3,6 +3,10 @@
     src: url(/fonts/Poppins/Poppins-Regular.ttf);
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
 
     margin: 30vh;
@@ -253,12 +257,12 @@ body {
 #MidSide {
 
     background-color: rgb(161, 161, 161);
-    border: 10px rgb(161, 161, 161) solid;
+    border: 5px rgb(161, 161, 161) solid;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 10px 15px rgb(68, 68, 68), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    margin: 4px 0 0 0;
+    margin: 0.4vh 0 0 0;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
@@ -267,7 +271,7 @@ body {
 
 #Screen {
 
-    min-width: 500px;
+    min-width:  90%;
     background-color: rgb(255, 255, 255);
     height: 90%;
     display: flex;
