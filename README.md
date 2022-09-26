@@ -9,7 +9,7 @@
   - [Autores y Licencias](#autores)
 ### Informacion General
 ***
-En este proyecto se ha recreado una consola <b>Nintendo Switch</b> con sus respectivos controladores.
+En este proyecto se ha recreado una consola <b>Nintendo Switch</b> con sus respectivos controladores, con un estilo 'virtual'.
 Especificamente hemos hecho un uso principal de las tecnologias Html<sub>5 </sub>y Css; más en profundidad las propiedades <i>Flex, Flexbox y Grid </i> han permitido una mejor elaboracion de esta.
 La consola es capaz de reproducir un video en la pantalla, previamente elegido por el desarrollador y tiene interaccion con el usuario(de tipo hover) en los controladores izquierdo y derecho, creando una transicion de estos para simular una extraccion. 
 ### Resultado Final
